@@ -1,17 +1,28 @@
-﻿using practicingC_;
+﻿/*using practicingC_;
 
-SensorTemperatura temp = new SensorTemperatura();
-SensorPresenca presenca = new SensorPresenca();
+Veiculo veiculo = new Veiculo("ABC-1234");
+veiculo.AtualizarVelocidade(72.5);
+Console.WriteLine("Veículo: " + veiculo.Placa);
+Console.WriteLine($"Velocidade atual: {veiculo.VelocidadeAtual} km/h");
+using practicingC_;
 
-temp.Ativar();
-temp.Desativar();
+Avaliacao avaliacao = new Avaliacao("Carla Silva");
+avaliacao.AtribuirNota(11);   // inválido
+avaliacao.AtribuirNota(8.5);  // válido
+*/
 
-presenca.Ativar();
-presenca.Desativar();
+using practicingC_;
 
+Agenda agenda = new Agenda("Marina Souza");
+agenda.AdicionarContatos(new Contato("Carlos", "11998887777"));
+agenda.AdicionarContatos(new Contato("Carlos", "11991112222")); // duplicado
+agenda.AdicionarContatos(new Contato("Julia", "21988776655"));
+agenda.ListarContatos();
 
-Processador cpu = new Processador("Intel", "i7-12700K");
-PlacaMae mobo = new PlacaMae("ASUS", "LGA1700");
-Computador pc = new Computador(cpu, mobo);
+Estudante estudante = new Estudante("Lucas Rocha");
+estudante.Nota1 = 7.5;
+estudante.Nota2 = 5.0;
 
-pc.ExibirConfiguracao();
+Console.WriteLine("Estudante: " + estudante.Nome);
+Console.WriteLine("Média: " + estudante.Media.ToString("F2"));
+Console.WriteLine("Situação: " + estudante.Situacao);
